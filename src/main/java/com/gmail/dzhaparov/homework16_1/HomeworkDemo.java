@@ -5,6 +5,8 @@ import java.util.function.Supplier;
 
 public abstract class HomeworkDemo {
 
+    static Supplier<String> messageSupplier;
+
     public static void main(String[] args) {
         MathOperation demo = new MathOperation() {
             @Override
@@ -12,6 +14,10 @@ public abstract class HomeworkDemo {
                 return a + b;
             }
         };
+
+
+        messageSupplier = () -> "Hello World!";
+        System.out.println(messageSupplier.get());
 
         System.out.println("Plus operation: " + demo.operate(3, 4));
 
