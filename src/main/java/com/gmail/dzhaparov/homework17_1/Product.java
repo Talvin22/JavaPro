@@ -2,7 +2,7 @@ package com.gmail.dzhaparov.homework17_1;
 
 import java.util.Comparator;
 
-public class Product implements Comparator<Product> {
+public class Product  {
     private String name;
     private String category;
     private double price;
@@ -46,8 +46,5 @@ public class Product implements Comparator<Product> {
                 '}';
     }
 
-    @Override
-    public int compare(Product o1, Product o2) {
-        return 0;
-    }
+
 }
