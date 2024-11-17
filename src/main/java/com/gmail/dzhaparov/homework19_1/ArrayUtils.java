@@ -1,10 +1,14 @@
 package com.gmail.dzhaparov.homework19_1;
 
+import com.gmail.dzhaparov.homework21_1.Author;
+import com.gmail.dzhaparov.homework21_1.MethodInfo;
+
 import java.util.Arrays;
 
 public class ArrayUtils {
 
-
+    @MethodInfo(name = "mergeSort", description = "method for mergeSorting", returnType = "void")
+    @Author("Talvin")
     public static void mergeSort(int[] array) {
         if (array.length < 2) {
             return;
@@ -18,7 +22,8 @@ public class ArrayUtils {
         merge(array, left, right);
     }
 
-
+    @MethodInfo(name = "merge", description = "method for merging", returnType = "void")
+    @Author("Talvin")
     private static void merge(int[] array, int[] left, int[] right) {
         int i = 0, j = 0, k = 0;
         while (i < left.length && j < right.length) {
@@ -37,6 +42,8 @@ public class ArrayUtils {
     }
 
 
+    @MethodInfo(name = "binarySearch", description = "method for binarySearch", returnType = "int")
+    @Author("Talvin")
     public static int binarySearch(int[] array, int target) {
         int left = 0;
         int right = array.length - 1;

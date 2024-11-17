@@ -24,8 +24,6 @@ public class GraphDemo {
         System.out.println("\nГраф після виделення ребра між 1 и 2:");
         graph.printGraph();
 
-        graph.removeVertex(2);
-        System.out.println("\nГраф після видалення вершини 2:");
-        graph.printGraph();
+
     }
 }
