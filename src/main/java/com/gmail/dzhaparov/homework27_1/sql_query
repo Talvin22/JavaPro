@@ -1,0 +1,19 @@
+CREATE DATABASE my_database;
+
+CREATE TABLE users(
+	id Integer PRIMARY KEY,
+	name varchar(32) NOT NULL,
+	age Integer NOT NULL,
+	email varchar(64) NOT NULL
+);
+
+INSERT INTO users (id, name, age, email)
+VALUES
+(1, 'John', 30, 'john@example.com'),
+(2, 'Alice', 25, 'alice@example.com'),
+(3, 'Bob', 35, 'bob@example.com')
+
+SELECT * FROM users;
+
+DELETE FROM users
+WHERE name = 'Bob';
