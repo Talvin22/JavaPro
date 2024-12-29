@@ -47,6 +47,7 @@ public class StudentDao implements GenericDao<Student, Long> {
     public Student findByEmail(String email) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
+
             return entityManager.createQuery("SELECT s FROM Student s WHERE s.email = :email", Student.class)
                     .setParameter("email", email)
                     .getSingleResult();
