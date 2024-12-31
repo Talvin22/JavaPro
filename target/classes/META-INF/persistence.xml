@@ -7,6 +7,8 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
             <class>com.gmail.dzhaparov.homework30_1.entity.Homework</class>
             <class>com.gmail.dzhaparov.homework30_1.entity.Student</class>
+            <class>com.gmail.dzhaparov.homework31_1.entity.Book</class>
+            <class>com.gmail.dzhaparov.homework31_1.entity.Library</class>
 
 
         <properties>
