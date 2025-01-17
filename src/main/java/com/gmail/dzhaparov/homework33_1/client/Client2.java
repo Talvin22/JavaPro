@@ -9,13 +9,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
-import java.util.Scanner;
-
-public class Client1 {
-    private static Logger logger = Logger.getLogger(Client1.class);
+public class Client2 {
+    private static Logger logger = Logger.getLogger(Client2.class);
 
     public static void main(String[] args) {
         try (Socket clientSocket = new Socket(NetworkProperty.HOST, NetworkProperty.PORT);
