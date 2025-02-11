@@ -21,7 +21,7 @@ public record CustomerDtoListResponse(
             return new CustomerDtoListResponse(
                     HttpStatus.OK.value(),
                     HttpStatus.OK.getReasonPhrase(),
-                    false, FAILURE_MESSAGE, Collections.emptyList());
+                    false, SUCCESS_MESSAGE, Collections.emptyList());
         else
             return new CustomerDtoListResponse(
                     HttpStatus.NO_CONTENT.value(),

@@ -25,7 +25,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public boolean create(CustomerDtoRequest request) {
-        String sql = "INSERT INTO customer (full_name, email, social_security_number) VALUES (:fullName, :email, :socialSecurityNumber)";
+        String sql = "INSERT INTO customers (full_name, email, social_security_number) VALUES (:fullName, :email, :socialSecurityNumber)";
 
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("fullName", request.fullName())
@@ -39,7 +39,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Optional<List<Customer>> getAll() {
-        String sql = "SELECT * FROM customer";
+        String sql = "SELECT * FROM customers";
         Optional<List<Customer>> customers;
 
         try {
@@ -53,7 +53,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Optional<Customer> getById(Long id) {
-        String sql = "SELECT * FROM customer WHERE id = :id";
+        String sql = "SELECT * FROM customers WHERE id = :id";
 
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("id", id);
@@ -83,7 +83,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public boolean deleteById(Long id) {
-        String sql = "DELETE FROM customer WHERE id = :id";
+        String sql = "DELETE FROM customers WHERE id = :id";
 
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("id", id);
@@ -93,7 +93,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Optional<Customer> getLastEntity() {
-        String sql = "SELECT * FROM customer ORDER BY id DESC LIMIT 1";
+        String sql = "SELECT * FROM customers ORDER BY id DESC LIMIT 1";
 
         SqlParameterSource params = new MapSqlParameterSource();
         Optional<Customer> customer;

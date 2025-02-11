@@ -35,12 +35,13 @@ public class CustomerController {
     public ResponseEntity<CustomerDtoListResponse> fetchAllCustomers() {
         List<Customer> customers = customerService.readAll();
 
-        return (!customers.isEmpty()) ?
+        return (!customers.isEmpty())
+                ?
                 ResponseEntity.status(HttpStatus.OK)
-                        .body(CustomerDtoListResponse.of(true, customers))
+                        .body(CustomerDtoListResponse.of(false, customers))
                 :
                 ResponseEntity.status(HttpStatus.OK)
-                        .body(CustomerDtoListResponse.of(false, Collections.emptyList()));
+                        .body(CustomerDtoListResponse.of(true, Collections.emptyList()));
 
 
     }
