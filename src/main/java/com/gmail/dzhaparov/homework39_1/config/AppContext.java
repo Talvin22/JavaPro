@@ -25,7 +25,6 @@ public class AppContext {
         driverManagerDataSource.setUrl(environment.getProperty("dbUrl"));
         driverManagerDataSource.setPassword(environment.getProperty("dbPass"));
         driverManagerDataSource.setUsername(environment.getProperty("dbUser"));
-        driverManagerDataSource.setUrl(environment.getProperty("dbUrl"));
         driverManagerDataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty("dbDriver")));
         return driverManagerDataSource;
     }
